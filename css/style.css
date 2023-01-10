@@ -1,0 +1,33 @@
+html {
+    box-sizing: border-box;
+}
+
+*, ::after, ::before {
+    box-sizing: inherit;
+}
+
+.body {
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    margin: 0 auto;
+    line-height: 1.5;
+    background-image: url(../images/money.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.result {
+    color: #05396a;
+    font-weight: 500;
+}
+
+.header {
+    font-size: 40px;
+    font-weight: 500;
+    color: #05396a;
+    text-align: center;
+}
+
