@@ -8,4 +8,5 @@ Here is one of my first websites - currency converter. I created it as part of a
 - JavaScript
 - BEM
 ## Check it out!
+![Currency converter webside gif](images/animation.gif)
 https://kamila2201.github.io/currency-converter/
