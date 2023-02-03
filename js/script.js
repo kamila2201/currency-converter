@@ -3,33 +3,38 @@ let currencyElement = document.querySelector(".js-currency");
 let formElement = document.querySelector(".js-form");
 let resultElement = document.querySelector(".js-result");
 
+let rateEUR = 4.67;
+let rateUSD = 4.39;
+let rateCHF = 4.72;
+let rateGBP = 5.3;
+
 formElement.addEventListener("submit", (event) => {
     event.preventDefault();
 
-    let currency = currencyElement.value;
-    let rate;
-    
+    let amount = +amountElement.value;
+	let currency = currencyElement.value;
+
+    let result;
 
     switch (currency) {
         case "EUR":
-            rate = 4.67;
+            result = amount / rateEUR;
             break;
         case "USD":
-            rate = 4.39;
+            result = amount / rateUSD;
             break;
         case "CHF":
-            rate = 4.72;
+            result = amount / rateCHF;
             break;
         case "GBP":
-            rate = 5.3;
+            result = amount / rateGBP;
             break;
     }
 
-    let amount = amountElement.value;
-    let result = amount / rate;
 
- resultElement.innerText = (`${result.toFixed(2)} ${currency}`);
-   
+
+    resultElement.innerText = (`${result.toFixed(2)} ${currency}`);
+
 });
 
 
