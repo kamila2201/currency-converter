@@ -18,7 +18,7 @@
         };
     };
 
-    const resultText = (result, currency) => {
+    const addResultText = (result, currency) => {
         const resultElement = document.querySelector(".js-result");
 
         resultElement.innerText = (`${result.toFixed(2)} ${currency}`);
@@ -29,13 +29,13 @@
 
         const amountElement = document.querySelector(".js-amount");
         const currencyElement = document.querySelector(".js-currency");
-        
+
         const amount = +amountElement.value;
         const currency = currencyElement.value;
 
         let result = calculateResult(amount, currency);
 
-        resultText(result, currency);
+        addResultText(result, currency);
 
     };
 
