@@ -1,19 +1,19 @@
 {
-    let amountElement = document.querySelector(".js-amount");
-    let currencyElement = document.querySelector(".js-currency");
-    let formElement = document.querySelector(".js-form");
-    let resultElement = document.querySelector(".js-result");
+    const amountElement = document.querySelector(".js-amount");
+    const currencyElement = document.querySelector(".js-currency");
+    const formElement = document.querySelector(".js-form");
+    const resultElement = document.querySelector(".js-result");
 
-    let rateEUR = 4.67;
-    let rateUSD = 4.39;
-    let rateCHF = 4.72;
-    let rateGBP = 5.3;
+    const rateEUR = 4.67;
+    const rateUSD = 4.39;
+    const rateCHF = 4.72;
+    const rateGBP = 5.3;
 
     formElement.addEventListener("submit", (event) => {
         event.preventDefault();
 
-        let amount = +amountElement.value;
-        let currency = currencyElement.value;
+        const amount = +amountElement.value;
+        const currency = currencyElement.value;
 
         let result;
 
