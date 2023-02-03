@@ -4,10 +4,25 @@
     const formElement = document.querySelector(".js-form");
     const resultElement = document.querySelector(".js-result");
 
-    const rateEUR = 4.67;
-    const rateUSD = 4.39;
-    const rateCHF = 4.72;
-    const rateGBP = 5.3;
+    const calculateResult = (amount, currency) => {
+        const rateEUR = 4.67;
+        const rateUSD = 4.39;
+        const rateCHF = 4.72;
+        const rateGBP = 5.3;
+
+        switch (currency) {
+            case "EUR":
+                return amount / rateEUR;
+            case "USD":
+                return amount / rateUSD;
+            case "CHF":
+                return amount / rateCHF;
+            case "GBP":
+                return amount / rateGBP;
+        };
+    };
+
+    
 
     formElement.addEventListener("submit", (event) => {
         event.preventDefault();
@@ -15,22 +30,9 @@
         const amount = +amountElement.value;
         const currency = currencyElement.value;
 
-        let result;
+        let result = calculateResult(amount, currency);
 
-        switch (currency) {
-            case "EUR":
-                result = amount / rateEUR;
-                break;
-            case "USD":
-                result = amount / rateUSD;
-                break;
-            case "CHF":
-                result = amount / rateCHF;
-                break;
-            case "GBP":
-                result = amount / rateGBP;
-                break;
-        }
+        
 
 
 
