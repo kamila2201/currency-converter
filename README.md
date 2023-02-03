@@ -7,6 +7,7 @@ Here is one of my first websites - currency converter. I created it as part of a
 - CSS
 - JavaScript
 - BEM
+- ES6+ features
 ## Check it out!
 https://kamila2201.github.io/currency-converter/
 ![Currency converter webside gif](images/animation.gif)
