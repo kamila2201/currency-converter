@@ -18,20 +18,24 @@
         };
     };
 
+    const resultText = (result, currency) => {
+        const resultElement = document.querySelector(".js-result");
+
+        resultElement.innerText = (`${result.toFixed(2)} ${currency}`);
+    }
+
     const onFormSubmit = (event) => {
         event.preventDefault();
 
         const amountElement = document.querySelector(".js-amount");
         const currencyElement = document.querySelector(".js-currency");
-        const resultElement = document.querySelector(".js-result");
-
-
+        
         const amount = +amountElement.value;
         const currency = currencyElement.value;
 
         let result = calculateResult(amount, currency);
 
-        resultElement.innerText = (`${result.toFixed(2)} ${currency}`);
+        resultText(result, currency);
 
     };
 
