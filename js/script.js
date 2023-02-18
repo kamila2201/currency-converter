@@ -1,5 +1,4 @@
 {
-
     const calculateResult = (amount, currency) => {
         const rateEUR = 4.67;
         const rateUSD = 4.39;
@@ -36,7 +35,6 @@
         let result = calculateResult(amount, currency);
 
         updateResultText(result, currency);
-
     };
 
     const init = () => {
@@ -46,8 +44,6 @@
     };
 
     init();
-
-
 }
 
 
